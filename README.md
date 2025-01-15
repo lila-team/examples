@@ -6,8 +6,8 @@ This repo has a collection of Lila test examples. All examples are run daily.
 
 ## Examples
 
-* (Google Maps)[tests/google-maps.yaml]: Finds directions between two locations.
-* (Calendly)[tests/calendly.yaml]: Picks a date and time and schedules a meeting.
+* **[Google Maps](tests/google-maps.yaml)**: Finds directions between two locations.
+* **[Calendly](tests/calendly.yaml)**: Picks a date and time and schedules a meeting.
 
 ## Daily runs
 
