@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  no-auth:
+  no-auth-tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -23,6 +23,8 @@ jobs:
     - name: Install lila cli
       run: |
         pip install lilacli
+    - name: Install playwright chrome
+      run: |
         playwright install chrome chromium
     - name: Run no-auth tests
       env:
