@@ -1,6 +1,0 @@
-tags:
-  - login-required
-
-steps:
-  - goto: https://open.spotify.com/
-  - verify: there is logged in

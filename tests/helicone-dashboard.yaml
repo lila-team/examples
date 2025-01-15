@@ -1,7 +1,0 @@
-tags:
-  - login-required
-
-steps:
-  - goto: https://us.helicone.ai/dashboard
-  - click: on the Properties option under the segment section of the left bar
-  - verify: there are 2 properties "conversation" and "test-case-id"

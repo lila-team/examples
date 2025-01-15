@@ -1,7 +1,0 @@
-tags:
-  - login
-
-steps:
-  - goto: https://us.helicone.ai/signin
-  - login: using user ${HELICONE_USERNAME} and password ${HELICONE_PASSWORD} in the US data region
-  - verify: login is successful
