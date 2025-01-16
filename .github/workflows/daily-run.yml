@@ -23,9 +23,9 @@ jobs:
     - name: Install lila cli
       run: |
         pip install lilacli
-    - name: Install playwright chrome
+    - name: Install playwright chromium
       run: |
-        playwright install chrome chromium
+        playwright install chromium
     - name: Run no-auth tests
       env:
         LILA_API_KEY: ${{ secrets.LILA_API_KEY  }}
