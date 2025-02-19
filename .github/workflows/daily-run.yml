@@ -12,6 +12,7 @@ jobs:
   calendly:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
     - uses: ./.github/actions/shared-steps
     - uses: actions/checkout@v4
     - name: Run Calendly
