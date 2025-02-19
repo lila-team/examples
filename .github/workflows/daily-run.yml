@@ -1,4 +1,4 @@
-name: Lila daily run
+name: Smoke tests
 
 on:
   workflow_dispatch:
@@ -9,25 +9,13 @@ permissions:
   contents: read
 
 jobs:
-  no-auth-tests:
+  calendly:
     runs-on: ubuntu-latest
     steps:
+    - uses: ./.github/actions/shared-steps
     - uses: actions/checkout@v4
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.11"
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-    - name: Install lila cli
-      run: |
-        pip install lilacli
-    - name: Install playwright chromium
-      run: |
-        playwright install chromium
-    - name: Run no-auth tests
+    - name: Run Calendly
       env:
         LILA_API_KEY: ${{ secrets.LILA_API_KEY  }}
       run: |
-        lila run tests --tags no-auth
+        lila run tests/calendly.yaml --headless
